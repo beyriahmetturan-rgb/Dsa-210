@@ -116,7 +116,7 @@ DSA210_project/
 This project is an original work prepared for **DSA 210 – Introduction to Data Science** (Sabancı University).
 
 AI tools were used as a **coding assistant** for:
-- Assistance in organizing the repository architecture and ensuring a reproducible workflow (`src/`, `outputs/`, `requirements.txt`, `README.md`)
+- Assistance in organizing the repository architecture and ensuring a reproducible workflow
 - Debugging the EDA + hypothesis testing pipeline
 - Improving the clarity of written explanations and formatting the final report.
 
