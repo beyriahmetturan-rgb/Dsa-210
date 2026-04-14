@@ -13,7 +13,7 @@ This project investigates whether **discussion volume on r/wallstreetbets** (men
 - **Reddit posts**: `reddit_wsb.csv` (Kaggle / G. Preda dataset format)
 - **Market enrichment**: downloaded via `yfinance` and cached under `data/market_<TICKER>.csv`
 
-## Method (14 April checkpoint scope)
+## Methodology (14 April checkpoint scope)
 - **Cleaning / preparation**
   - Parse timestamps (`created` Unix epoch; fallback to `timestamp`)
   - Extract ticker mentions (regex on `title + body`)
@@ -27,6 +27,26 @@ This project investigates whether **discussion volume on r/wallstreetbets** (men
 - **Hypothesis testing**
   - Mann–Whitney U: compare **high-attention days** (top 25% mentions) vs others
   - Spearman correlation: mentions vs next-day targets
+
+### Data preparation details
+- Converted post time to UTC datetime using `created` (Unix epoch). If missing, used parsed `timestamp`.
+- Extracted ticker mentions from `title + body` using a regex and counted daily mentions per ticker.
+- Aggregated Reddit posts to daily level:
+  - `posts` (number of posts/day)
+  - `score_sum`, `score_mean`
+  - `mentions_GME`, `mentions_AMC`, `mentions_BB`
+- Joined daily Reddit aggregates with daily market data by date.
+- Created **next-day** market targets to test “leading indicator” effects:
+  - `vol_next` = next-day trading volume
+  - `absret_next` = next-day absolute close-to-close return
+  - `hl_next` = next-day high-low range scaled by close
+
+### EDA outputs
+- WSB activity over time: `outputs/figures/posts_per_day.png`
+- Daily mentions for GME/AMC/BB: `outputs/figures/mentions_per_day.png`
+- Scatter + regression (per ticker):
+  - `outputs/figures/<TICKER>_mentions_vs_nextday_volume.png`
+  - `outputs/figures/<TICKER>_mentions_vs_nextday_abs_return.png`
 
 ## Setup
 
@@ -63,6 +83,12 @@ From `outputs/tables/hypothesis_tests.csv`:
 - **H3 (Spearman: mentions vs next-day volume)**: significant positive correlation for **GME** (ρ=0.798, \(p=5.62\times 10^{-28}\)), **AMC** (ρ=0.485, \(p=1.74\times 10^{-8}\)), **BB** (ρ=0.702, \(p=3.07\times 10^{-19}\)).
 - **H3b (Spearman: mentions vs next-day \(|r|\))**: significant for **GME** (ρ=0.354, \(p=6.95\times 10^{-5}\)) and **BB** (ρ=0.240, \(p=0.00793\)); **AMC** not significant (\(p=0.063\)).
 
+## Limitations (for this stage)
+- Mention extraction is regex-based and may include false positives / miss context (e.g., abbreviations).
+- Using daily aggregation hides intraday dynamics.
+- Next-day relationships are correlational; no causal claims.
+- Only 2020-09 to 2021-08 is covered by this Reddit CSV.
+
 ## Example figures
 ![Posts per day](outputs/figures/posts_per_day.png)
 ![Mentions per day](outputs/figures/mentions_per_day.png)
@@ -82,7 +108,6 @@ DSA210_project/
 ├── outputs/
 │   ├── figures/
 │   └── tables/
-├── REPORT_14APR_EDA_HYPOTHESIS.md
 ├── requirements.txt
 └── README.md
 ```
