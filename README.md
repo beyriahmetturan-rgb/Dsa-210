@@ -118,7 +118,7 @@ This project is an original work prepared for **DSA 210 – Introduction to Data
 AI tools were used as a **coding assistant** for:
 - Drafting a reproducible project structure (`src/`, `outputs/`, `requirements.txt`, `README.md`)
 - Implementing and debugging the EDA + hypothesis testing pipeline
-- Converting the pipeline into a step-by-step Jupyter notebook
+
 
 **Prompts used (high level):**
 - “Implement the 14 April deliverable: data collection/enrichment, EDA, hypothesis tests for `reddit_wsb.csv` and yfinance market data (GME/AMC/BB).”
