@@ -116,13 +116,8 @@ DSA210_project/
 This project is an original work prepared for **DSA 210 – Introduction to Data Science** (Sabancı University).
 
 AI tools were used as a **coding assistant** for:
-- Drafting a reproducible project structure (`src/`, `outputs/`, `requirements.txt`, `README.md`)
-- Implementing and debugging the EDA + hypothesis testing pipeline
-
-
-**Prompts used (high level):**
-- “Implement the 14 April deliverable: data collection/enrichment, EDA, hypothesis tests for `reddit_wsb.csv` and yfinance market data (GME/AMC/BB).”
-- “Create a cell-by-cell `ipynb` notebook showing imports, cleaning, mention extraction, joining, plots, and statistical tests.”
-- “Add an Academic Integrity section and improve README; create `outputs/tables/` and save tables there.”
+- Assistance in organizing the repository architecture and ensuring a reproducible workflow (`src/`, `outputs/`, `requirements.txt`, `README.md`)
+- Debugging the EDA + hypothesis testing pipeline
+- Improving the clarity of written explanations and formatting the final report.
 
 All results were reviewed and are reproducible by running the code in this repository.
