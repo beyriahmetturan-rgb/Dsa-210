@@ -1,0 +1,13 @@
+hypothesis,ticker,n,statistic,p_value,n_high,n_low,cliffs_delta
+H1_high_mentions_increase_nextday_volume,GME,121,2624.0,3.002103608051731e-13,31.0,90.0,0.8810035842293907
+H2_high_mentions_increase_nextday_abs_return,GME,121,1787.0,0.020095610905211284,31.0,90.0,0.2810035842293907
+H3_spearman_mentions_vs_nextday_volume,GME,121,0.798333424617125,5.617549004910539e-28,,,
+H3b_spearman_mentions_vs_nextday_abs_return,GME,121,0.3535547331261037,6.94974373513915e-05,,,
+H1_high_mentions_increase_nextday_volume,AMC,121,2203.0,4.760227294502033e-06,32.0,89.0,0.5470505617977528
+H2_high_mentions_increase_nextday_abs_return,AMC,121,1815.0,0.021739465421862007,32.0,89.0,0.27457865168539325
+H3_spearman_mentions_vs_nextday_volume,AMC,121,0.4848679995833268,1.742682647210093e-08,,,
+H3b_spearman_mentions_vs_nextday_abs_return,AMC,121,0.16946681182568618,0.06313355418819397,,,
+H1_high_mentions_increase_nextday_volume,BB,121,2674.0,2.3945150686879504e-11,35.0,86.0,0.7767441860465116
+H2_high_mentions_increase_nextday_abs_return,BB,121,1760.0,0.145713549203072,35.0,86.0,0.16943521594684385
+H3_spearman_mentions_vs_nextday_volume,BB,121,0.7017827569168272,3.0684636301651747e-19,,,
+H3b_spearman_mentions_vs_nextday_abs_return,BB,121,0.24031646504745502,0.007929212643272204,,,

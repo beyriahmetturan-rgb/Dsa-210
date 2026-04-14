@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Big/raw data (keep outputs + cached market data tracked for reproducibility)
+*.parquet
+*.pkl
+
