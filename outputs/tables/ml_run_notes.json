@@ -1,0 +1,6 @@
+{
+  "validation": "TimeSeriesSplit: each fold trains on an earlier time block and tests on the next block.",
+  "regression_target": "log1p(next-day volume)",
+  "classification_target": "1 if next-day volume >= median(next-day volume on the training slice of that CV fold)",
+  "interpretation": "Ridge is a regularized linear baseline; RandomForest and GradientBoosting capture non-linear interactions between WSB activity and same-day market proxies. Under TimeSeriesSplit, sklearn R\u00b2 can be strongly negative when the test window differs from the training scale even if MAE beats a naive mean forecaster \u2014 report MAE improvement vs naive alongside R\u00b2. For classification, prefer ROC-AUC over accuracy when classes are imbalanced; high accuracy with low F1 usually means the model predicts the majority class often."
+}
