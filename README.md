@@ -2,7 +2,7 @@
 
 ## Project overview
 
-This repository is the term project for **DSA 210 – Introduction to Data Science** (Sabancı University, Spring 2025–2026). It builds a full **data science pipeline**: collect and enrich data, explore it, run **statistical hypothesis tests**, then extend the work with **supervised machine learning** and clear interpretation—similar in spirit to course repos that keep one main notebook (e.g. [Arda Kalyoncu’s project layout](https://github.com/kalyoncuarda/Arda_Kalyoncu_Dsa_210_Term_Project/blob/main/README.md)) while the ML logic can also live in importable Python modules (cf. [Nil Kadakal’s separate `ml_salary_models.ipynb`](https://github.com/NilKadakal/DSA210_NilKadakal/blob/main/ml_salary_models.ipynb); here ML is **Section 10** inside `dsa210_analysis.ipynb` so one file shows the whole story).
+This repository is the term project for **DSA 210 – Introduction to Data Science** (Sabancı University, Spring 2025–2026). It builds a full **data science pipeline**: collect and enrich data, explore it, run **statistical hypothesis tests**, then extend the work with **supervised machine learning** and interpretation. The main narrative lives in **`dsa210_analysis.ipynb`** (Sections 1–9: April checkpoint; **Section 10:** ML). Reusable code is also in **`src/`** (`run_eda_hypothesis.py`, `run_ml.py`) for command-line runs.
 
 **Working title:** *The Pulse of WallStreetBets: Analyzing the Impact of Social Media Discussion Volume on Stock Market Volatility and Trading Volume.*
 
@@ -185,13 +185,6 @@ All statistical and ML results are **correlational / predictive on a fixed sampl
 
 ## Academic Integrity (AI usage disclosure)
 
-This project is original course work for **DSA 210** (Sabancı University). **AI tools** (e.g. coding assistants) were used for:
-
-- Organizing the repository and keeping a reproducible workflow  
-- Implementing and debugging the EDA + hypothesis testing pipeline  
-- Implementing the May ML milestone (`src/run_ml.py`, notebook Section 10), metrics tables, and figures  
-- Restructuring the README (including alignment with common course README patterns) and improving clarity of explanations  
-
-**Prompts (high level):** WSB + yfinance EDA/hypothesis deliverable; ML with time-series CV and multiple models; README in the style of peer examples; consolidate ML into `dsa210_analysis.ipynb` Section 10; document AI use per course policy. **All generated outputs were reviewed** and can be reproduced from this repository.
+This project is original course work for **DSA 210** (Sabancı University). **AI tools** were used sparingly as a **coding assistant** (structure, debugging, README wording). All results were **reviewed** and are reproducible from this repository.
 
 All sources (Kaggle Reddit data, yfinance) should be cited in the final report as required by the instructor.
